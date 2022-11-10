@@ -69,7 +69,7 @@ function initFormHandler() {
 
   // B2. TODO - Get a reference to the <form> element
   let form = document.querySelector("form");
-  var main = document.querySelector("main");
+  let main = document.querySelector("main");
 
   // B3. TODO - Add an event listener for the 'submit' event, which fires when the
   //            submit button is clicked
@@ -77,8 +77,7 @@ function initFormHandler() {
     let formData = new FormData(form);
     let recipeObject = {};
 
-    let data = formData.entries();
-    for (const pair in data) {
+    for (const pair of formData.entries()) {
       recipeObject[pair[0]] = pair[1];
     }
 
